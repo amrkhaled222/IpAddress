@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+	box-sizing: border-box;
+	font-family: "Rubik", sans-serif;
+}
+.container {
+	padding: 1rem 0;
+	&-ipaddresstracker {
+		background-image: url(assets/pattern-bg-desktop.png);
+		position: relative;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+.IPAddressTracker {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+
+	min-height: 32vh;
+	position: relative;
+	max-width: 1440px;
+	margin: auto;
+	h1 {
+		font-size: 32px;
+	}
+
+	.ipInput {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		input {
+			border-radius: 10px 0 0 10px;
+			cursor: pointer;
+			border: none;
+			height: 58px;
+			width: 100%;
+			max-width: 490px;
+			padding: 10px;
+		}
+		button {
+			background-color: black;
+			border-radius: 0px 10px 10px 0px;
+			border: none;
+			cursor: pointer;
+			height: 58px;
+			width: 58px;
+		}
+	}
+}
+.ipShowData {
+	display: flex;
+	justify-content: space-between;
+	background-color: white;
+	width: 77%;
+	position: absolute;
+	z-index: 1003;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%, 60%);
+	padding: 2rem;
+	border-radius: 20px;
+	min-height: 160px;
+	max-width: 1110px;
+	gap: 7px;
+	box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.1);
+	div {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 33%;
+		position: relative;
+		&:not(:last-of-type) {
+			&::before {
+				content: "";
+				width: 2px;
+				height: 70%;
+				background-color: black;
+				position: absolute;
+				right: 0;
+				opacity: 0.15;
+				bottom: 13.5px;
+			}
+		}
+		h6 {
+			margin: 10px 0;
+			opacity: 0.4987;
+			color: #2c2c2c;
+			font-family: Rubik;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+			letter-spacing: 1.75px;
+			text-transform: uppercase;
+		}
+		p {
+			&:first-of-type {
+				word-break: break-all;
+			}
+			color: #2c2c2c;
+			font-family: Rubik;
+			font-size: 26px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 30px; /* 115.385% */
+			letter-spacing: -0.232px;
+			margin: 0;
+		}
+	}
+}
+.root {
+	height: 100vh;
+}
+.mapBox {
+	height: 63vh;
+}
+@media (max-width: 840px) {
+	.ipShowData {
+		flex-direction: column;
+		padding: 15px;
+		max-width: 375px;
+		width: 87%;
+		transform: translate(-50%, 76%);
+		div {
+			&:not(:last-of-type) {
+				&::before {
+					display: none;
+				}
+			}
+			h6 {
+				text-align: center;
+				font-size: 10px;
+			}
+			p {
+				&:first-of-type {
+					word-break: break-all;
+				}
+				text-align: center;
+				font-size: 20px;
+			}
+		}
+	}
+
+	.IPAddressTracker {
+		h1 {
+			font-size: 26px;
+		}
+
+		.ipInput {
+			input {
+				max-width: 300px;
+			}
+		}
+	}
+}
