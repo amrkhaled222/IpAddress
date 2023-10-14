@@ -25,7 +25,8 @@ function App() {
 
 	function getdataofip(ip) {
 		fetch(
-			`https://geo.ipify.org/api/v2/country,city?apiKey=at_1ZBzUuVXz13xbm6GEO92ygEgoKOc1&ipAddress=${ip}`
+			`
+			https://geo.ipify.org/api/v2/country,city?apiKey=at_3hSu5VMbVqdor7VjLFhPk4x0DplBO&ipAddress${ip}`
 		)
 			.then((response) => response.json())
 			.then((e) => {
