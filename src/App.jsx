@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import IpdData from "./components/IpData";
-import LocationData from "./components/LocationData";
+
 function App() {
 	const [ipdata, setIpData] = useState({});
 	const [myip, setmyip] = useState("");
